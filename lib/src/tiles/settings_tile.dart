@@ -13,6 +13,7 @@ class SettingsTile extends AbstractSettingsTile {
     this.leading,
     this.trailing,
     this.value,
+    this.backgroundColor,
     required this.title,
     this.description,
     this.onPressed,
@@ -29,6 +30,7 @@ class SettingsTile extends AbstractSettingsTile {
     this.leading,
     this.trailing,
     this.value,
+    this.backgroundColor,
     required this.title,
     this.description,
     this.onPressed,
@@ -45,6 +47,7 @@ class SettingsTile extends AbstractSettingsTile {
     required this.initialValue,
     required this.onToggle,
     this.activeSwitchColor,
+    this.backgroundColor,
     this.leading,
     this.trailing,
     required this.title,
@@ -72,6 +75,9 @@ class SettingsTile extends AbstractSettingsTile {
   /// A function that is called by tap on a tile
   final Function(BuildContext context)? onPressed;
 
+  /// The widget tile background color
+  final Color? backgroundColor;
+
   late final Color? activeSwitchColor;
   late final Widget? value;
   late final Function(bool value)? onToggle;
@@ -94,6 +100,7 @@ class SettingsTile extends AbstractSettingsTile {
           tileType: tileType,
           value: value,
           leading: leading,
+          backgroundColor: backgroundColor,
           title: title,
           enabled: enabled,
           activeSwitchColor: activeSwitchColor,
@@ -110,6 +117,7 @@ class SettingsTile extends AbstractSettingsTile {
           tileType: tileType,
           value: value,
           leading: leading,
+          backgroundColor: backgroundColor,
           title: title,
           trailing: trailing,
           enabled: enabled,
@@ -124,6 +132,7 @@ class SettingsTile extends AbstractSettingsTile {
           tileType: tileType,
           value: value,
           leading: leading,
+          backgroundColor: backgroundColor,
           title: title,
           enabled: enabled,
           trailing: trailing,

@@ -11,6 +11,7 @@ class IOSSettingsTile extends StatefulWidget {
     required this.onPressed,
     required this.onToggle,
     required this.value,
+    required this.backgroundColor,
     required this.initialValue,
     required this.activeSwitchColor,
     required this.enabled,
@@ -28,6 +29,7 @@ class IOSSettingsTile extends StatefulWidget {
   final bool? initialValue;
   final bool enabled;
   final Color? activeSwitchColor;
+  final Color? backgroundColor;
   final Widget? trailing;
 
   @override

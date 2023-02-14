@@ -9,6 +9,7 @@ class AndroidSettingsTile extends StatelessWidget {
     required this.description,
     required this.onPressed,
     required this.onToggle,
+    required this.backgroundColor,
     required this.value,
     required this.initialValue,
     required this.activeSwitchColor,
@@ -27,6 +28,7 @@ class AndroidSettingsTile extends StatelessWidget {
   final bool initialValue;
   final bool enabled;
   final Color? activeSwitchColor;
+  final Color? backgroundColor;
   final Widget? trailing;
 
   @override
@@ -54,6 +56,7 @@ class AndroidSettingsTile extends StatelessWidget {
                 },
           highlightColor: theme.themeData.tileHighlightColor,
           child: Container(
+            color: backgroundColor,
             child: Row(
               children: [
                 if (leading != null)

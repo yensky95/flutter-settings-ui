@@ -10,6 +10,7 @@ class WebSettingsTile extends StatelessWidget {
     required this.description,
     required this.onPressed,
     required this.onToggle,
+    required this.backgroundColor,
     required this.value,
     required this.initialValue,
     required this.activeSwitchColor,
@@ -29,6 +30,7 @@ class WebSettingsTile extends StatelessWidget {
   final bool enabled;
   final Widget? trailing;
   final Color? activeSwitchColor;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
