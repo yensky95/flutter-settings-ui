@@ -25,6 +25,7 @@ class SettingsList extends StatelessWidget {
     this.platform,
     this.lightTheme,
     this.darkTheme,
+    this.backgroundColor,
     this.brightness,
     this.contentPadding,
     this.applicationType = ApplicationType.material,
@@ -40,6 +41,7 @@ class SettingsList extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final List<AbstractSettingsSection> sections;
   final ApplicationType applicationType;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +61,7 @@ class SettingsList extends StatelessWidget {
     ).merge(theme: brightness == Brightness.dark ? darkTheme : lightTheme);
 
     return Container(
-      color: themeData.settingsListBackground,
+      color: backgroundColor,
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
       child: SettingsTheme(
